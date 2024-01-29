@@ -1,18 +1,18 @@
 # The binary_search function takes a sorted array and an item.
 # If the item is in the array, the function returns its position.
 
-def binary_search(input_list: [],
+def binary_search(input_array: [],
                   item: int) -> {}:
 
-    input_list = sorted(input_list)
-    # print(input_list)
+    input_array = sorted(input_array)
+    # print(input_array)
     low = 0
-    high = len(input_list) - 1
+    high = len(input_array) - 1
     steps = 0
 
     while low <= high:
         mid = int((low + high)/2)
-        guess = input_list[mid]
+        guess = input_array[mid]
 
         if guess == item:
             return {"pos": mid, "steps": steps}
